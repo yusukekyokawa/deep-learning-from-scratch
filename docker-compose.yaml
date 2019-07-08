@@ -1,12 +1,13 @@
-version: '2.3'
+version: '3'
 services:
-  tensorflow-gpu:
+  anaconda:
     build:
+      context: ./
       dockerfile: Dockerfile
     container_name: anaconda
     command: /bin/bash
     ports:
-      - "8000:8888"
+      - "8888:8888"
     tty: true
     volumes:
       - ./Project:/code
